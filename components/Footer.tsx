@@ -48,7 +48,7 @@ export default function Footer() {
               UM-BBM Tematik Teknik Informatika 2026
             </strong>
             . Dikembangkan sebagai media informasi digital untuk pemetaan
-            fasilitas penunjang serta seluruh spot wisata Coban Talun.
+            fasilitas penunjang serta seluruh spot wisata Mikutopia.
           </p>
         </div>
       </div>

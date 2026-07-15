@@ -6,33 +6,23 @@ export default function DescriptionSection() {
   const images = [
     {
       id: 1,
-      src: "/airterjun/2.webp",
-      name: "Air Terjun",
+      src: "/wahana/crispa.webp",
+      name: "Crispa",
     },
     {
       id: 2,
-      src: "/seribuayunan/4.webp",
-      name: "Seribu Ayunan",
+      src: "/wahana/morchella.webp",
+      name: "Morchella",
     },
     {
       id: 3,
-      src: "/jeep/2.webp",
-      name: "Jeep Offroad",
+      src: "/wahana/truffle1.webp",
+      name: "Truffle",
     },
     {
       id: 4,
-      src: "/oyot/1.webp",
-      name: "Oyot",
-    },
-    {
-      id: 5,
-      src: "/pagupon/6.webp",
-      name: "Pagupon Camp",
-    },
-    {
-      id: 6,
-      src: "/tamanbunga/3.webp",
-      name: "Taman Bunga",
+      src: "/wahana/truffle2.webp",
+      name: "Truffle",
     },
   ];
 
@@ -66,31 +56,34 @@ export default function DescriptionSection() {
         {/* KONTEN TEKS DESKRIPSI */}
         <div className="space-y-8">
           <h2 className="text-4xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight text-center md:text-left">
-            Pesona Keindahan Alam Coban Talun
+            Pesona Dunia Fantasi Negeri Jamur Mikutopia
           </h2>
           <div className="text-slate-600 space-y-6 text-base md:text-lg font-light leading-relaxed text-justify md:text-left">
             <p>
               <strong className="font-semibold text-slate-800">
-                Coban Talun
+                Mikutopia
               </strong>{" "}
-              merupakan salah satu destinasi wisata alam air terjun unggulan
-              yang terletak di kaki Gunung Arjun-Welirang. Dikelilingi oleh
-              hutan pinus yang asri dan sejuk, kawasan ini menawarkan panorama
-              alam yang memikat serta udara pegunungan yang sangat menyegarkan.
+              merupakan sebuah objek wisata tematik unik bernuansa Negeri Jamur
+              yang terletak di kawasan sejuk Kota Batu. Mengusung konsep dunia
+              fantasi yang ajaib dan dipadukan dengan udara pegunungan yang
+              menyegarkan, destinasi ini menawarkan lanskap visual yang memukau
+              dan dirancang khusus untuk membawa pengunjung masuk ke dalam
+              petualangan dunia dongeng yang penuh warna.
             </p>
             <p>
-              Selain air terjun utamanya yang megah, kawasan wisata ini telah
-              berkembang pesat dengan menghadirkan berbagai zona kreatif, area
-              perkemahan, taman bunga, hingga fasilitas komunal yang dikelola
-              secara terpadu. Perpaduan antara keindahan alam murni dan
-              pengelolaan spot modern menjadikannya tempat yang sempurna untuk
-              rekreasi keluarga maupun edukasi lingkungan.
+              Di dalam kawasan Mikutopia, pengunjung akan dimanjakan dengan
+              beragam spot foto menarik yang sangat estetis dan berbagai wahana
+              permainan seru. Seluruh wahana dan zona rekreasi di sini dirancang
+              secara inklusif, sehingga sangat ramah dan menyenangkan untuk
+              dinikmati oleh berbagai kalangan pengunjung, mulai dari anak-anak,
+              remaja, hingga dewasa.
             </p>
             <p>
               Melalui peta interaktif di bawah ini, Anda dapat menjelajahi
-              titik-titik lokasi penting, mulai dari ragam spot wisata swafoto
-              hingga fasilitas umum penunjang kenyamanan kunjungan Anda di
-              lapangan.
+              seluruh sudut Negeri Jamur dengan sangat mudah. Peta ini akan
+              memandu Anda menemukan berbagai wahana serta fasilitas umum
+              penunjang kenyamanan di seluruh area Mikutopia, mulai dari
+              mushola, toilet, foodcourt.
             </p>
           </div>
         </div>

@@ -160,10 +160,12 @@ export default function SpotDetailPage() {
             {/* Tag Kategori */}
             <div className="flex items-center gap-2 sm:self-center">
               <span
-                className={`text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded ${
-                  spot.category === "wisata"
+                className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                  spot.category === "wahana"
                     ? "bg-emerald-100 text-emerald-800"
-                    : "bg-blue-100 text-blue-800"
+                    : spot.category === "caffe"
+                      ? "bg-amber-100 text-amber-800"
+                      : "bg-blue-100 text-blue-800" // Default ke fasilitas
                 }`}
               >
                 {spot.category}
@@ -185,90 +187,6 @@ export default function SpotDetailPage() {
             </strong>{" "}
             {spot.description}
           </p>
-        </div>
-
-        {/* SEPARATOR HALUS */}
-        <hr className="border-slate-200" />
-
-        {/* DUA KOLOM UNTUK FASILITAS & HTM */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-2">
-          {/* FASILITAS BULLET LIST */}
-          {spot.facilities && spot.facilities.length > 0 && (
-            <div className="space-y-4">
-              <h3 className="text-xs font-bold text-black uppercase tracking-widest">
-                Fasilitas Pendukung
-              </h3>
-              <ul className="space-y-2.5 text-sm md:text-base text-slate-600 font-light list-disc list-inside">
-                {spot.facilities.map((facility, idx) => (
-                  <li key={idx} className="marker:text-emerald-500 font-medium">
-                    <span className="text-slate-600 font-normal ml-2">
-                      {facility}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* HARGA TIKET (HTM) */}
-          {spot.htm && spot.htm.length > 0 && (
-            <div className="space-y-4">
-              <h3 className="text-xs font-bold text-black uppercase tracking-widest">
-                Informasi Retribusi / HTM
-              </h3>
-              <div className="space-y-3 divide-y divide-slate-100">
-                {spot.htm.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className={`flex justify-between items-center text-sm md:text-base ${idx > 0 ? "pt-3" : ""}`}
-                  >
-                    <span className="text-slate-500 font-light">
-                      {item.label}
-                    </span>
-                    <span className="font-bold text-slate-900">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-          {spot.additionalInfo &&
-            (spot.additionalInfo.phone || spot.additionalInfo.website) && (
-              <div className="col-span-1 md:col-span-2 pt-6 border-t border-slate-100 space-y-4">
-                <h3 className="text-xs font-bold text-black uppercase tracking-widest">
-                  Informasi Kontak & Layanan
-                </h3>
-                <div className="flex flex-wrap gap-6 text-sm md:text-base">
-                  {/* Jika ada nomor telepon/CP, render bagian ini */}
-                  {spot.additionalInfo.phone && (
-                    <div className="flex items-center gap-2.5 text-slate-600 font-light">
-                      Contact Person :
-                      <span>
-                        <strong className="text-slate-800 font-normal">
-                          {spot.additionalInfo.phone}
-                        </strong>
-                      </span>
-                    </div>
-                  )}
-
-                  {/* Jika ada tautan website, render bagian ini */}
-                  {spot.additionalInfo.website && (
-                    <div className="flex items-center gap-2.5 text-slate-600 font-light">
-                      Website :
-                      <a
-                        href={spot.additionalInfo.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-emerald-600 hover:underline font-medium"
-                      >
-                        {spot.additionalInfo.website}
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
         </div>
 
         {/* TOMBOL TINDAKAN RUTE MAPS */}

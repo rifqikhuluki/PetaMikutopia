@@ -7,17 +7,17 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.65)), url('/airterjun/1.webp')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.65)), url('/wahana/morchella.webp')`,
         }}
       />
 
       {/* Teks Konten Banner */}
       <div className="relative z-10 max-w-4xl mx-auto space-y-6 text-white px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-md">
-          Peta Wisata Coban Talun
+          Peta Wisata Mikutopia
         </h1>
         <p className="text-lg md:text-2xl font-light text-slate-200 drop-shadow max-w-2xl mx-auto">
-          Kawasan Destinasi Wisata Alam Coban Talun
+          Kawasan Destinasi Wisata Mikutopia
         </p>
 
         <div className="pt-4 border-t border-white/20 max-w-xl mx-auto">
