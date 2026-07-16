@@ -12,7 +12,6 @@ export interface Spot {
   zoom: number;
   category: "wahana" | "caffe" | "fasilitas";
   images: string[];
-  hasDetailPage: boolean;
 }
 
 export const spotsData: Spot[] = [
@@ -26,7 +25,6 @@ export const spotsData: Spot[] = [
     category: "fasilitas",
     zoom: 21,
     images: ["/wahana/crispa.webp"],
-    hasDetailPage: false,
   },
   {
     id: "2",
@@ -38,7 +36,6 @@ export const spotsData: Spot[] = [
     category: "wahana",
     zoom: 21,
     images: ["/wahana/crispa.webp"],
-    hasDetailPage: true,
   },
   {
     id: "3",
@@ -50,6 +47,5 @@ export const spotsData: Spot[] = [
     category: "caffe",
     zoom: 21,
     images: ["/wahana/crispa.webp"],
-    hasDetailPage: true,
   },
 ];
