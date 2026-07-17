@@ -12,6 +12,7 @@ export interface Spot {
   zoom: number;
   category: "wahana" | "caffe" | "fasilitas";
   images: string[];
+  hasDetailPage: boolean;
 }
 
 export const spotsData: Spot[] = [
@@ -21,910 +22,902 @@ export const spotsData: Spot[] = [
     description:
       "Tempat pembelian dan penukaran tiket sekaligus pusat informasi mengenai wahana, fasilitas, jadwal operasional, dan layanan pengunjung di Mikutopia.",
     coordinates: [-7.8095355964464845, 112.5299340353814],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8095355964464845, 112.5299340353814",
+    gmapsUrl: "https://maps.app.goo.gl/teXXAWfigdXdVSkn7",
     category: "fasilitas",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: [
+      "/loket_informasi/loket_informasi1.webp",
+      "/loket_informasi/loket_informasi2.webp",
+      "/loket_informasi/loket_informasi3.webp",
+    ],
+    hasDetailPage: false,
   },
   {
     id: "2",
-    name: "Mushola",
-    description:
-      "Tempat ibadah bagi pengunjung yang ingin melaksanakan salat dengan tenang dan nyaman selama berada di kawasan Mikutopia.",
-    coordinates: [-7.809714252780397, 112.5304874844475],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809714252780397, 112.5304874844475",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "3",
-    name: "P3K (Sebelah Driver Rest Room)",
-    description:
-      "Pos pertolongan pertama bagi pengunjung yang mengalami cedera ringan, gangguan kesehatan, atau membutuhkan bantuan medis.",
-    coordinates: [-7.809903634059449, 112.53082272252465],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809903634059449, 112.53082272252465",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "4",
-    name: "Area Parkir Motor",
-    description:
-      "Area parkir khusus kendaraan roda dua yang disediakan bagi pengunjung Mikutopia.",
-    coordinates: [-7.810442390956049, 112.53086490170607],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.810442390956049, 112.53086490170607",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "5",
-    name: "Area Parkir Mobil",
-    description:
-      "Area parkir khusus mobil pribadi yang tertata untuk memudahkan pengunjung saat datang dan meninggalkan kawasan Mikutopia.",
-    coordinates: [-7.810703470353992, 112.53048194043525],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.810703470353992, 112.53048194043525",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "6",
-    name: "Area Parkir Bis",
-    description:
-      "Area parkir khusus bus dan kendaraan rombongan dengan ruang yang memadai untuk menaikkan dan menurunkan penumpang.",
-    coordinates: [-7.810766601715004, 112.5308247020677],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.810766601715004, 112.5308247020677",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "7",
-    name: "Toilet 6 (Belakang Driver Rest Room)",
-    description:
-      "Fasilitas toilet umum yang bersih dan nyaman bagi pengunjung serta dilengkapi area cuci tangan.",
-    coordinates: [-7.80970172567823, 112.5307315926391],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.80970172567823, 112.5307315926391",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "8",
-    name: "Toilet 1 (Sebelah Cafe Lingzhi)",
-    description:
-      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di dekat area food court.",
-    coordinates: [-7.8091441899761564, 112.52972839621454],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8091441899761564, 112.52972839621454",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "9",
-    name: "Toilet 2 (Sebelah Tiram – Busy Cowboy)",
-    description:
-      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di dekat wahana tiram dan matsutake",
-    coordinates: [-7.808289186022769, 112.52955696647678],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808289186022769, 112.52955696647678",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "10",
-    name: "Toilet 5 (Sebelah Truffle – Bom-Bom Car)",
-    description:
-      "Fasilitas toilet umum yang bersih dan nyaman bagi pengunjung serta dilengkapi area cuci tangan.",
-    coordinates: [-7.8085003803415125, 112.53054332288387],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8085003803415125, 112.53054332288387",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "11",
-    name: "Toilet 4 (Bawah Lactarius – Bianglala)",
-    description:
-      "Fasilitas toilet umum yang bersih dan nyaman bagi pengunjung serta dilengkapi area cuci tangan.",
-    coordinates: [-7.807973696913775, 112.53094125494312],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807973696913775, 112.53094125494312",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "12",
-    name: "Ruang Laktasi (Sebelah Loket)",
+    name: "Ruang Laktasi",
     description:
       "Ruangan khusus yang aman, nyaman, dan privat bagi ibu untuk menyusui atau memenuhi kebutuhan bayi, terletak di area depan dekat loket.",
     coordinates: [-7.809610258670143, 112.52998740038642],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809610258670143, 112.52998740038642",
+    gmapsUrl: "https://maps.app.goo.gl/Gmn1YVaWqwh9PwXB7",
     category: "fasilitas",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/laktasi_p3k/laktasi_loket.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "13",
-    name: "Penitipan Barang",
+    id: "3",
+    name: "Tempat Penitipan Barang",
     description:
       "Fasilitas untuk menyimpan barang bawaan sementara agar pengunjung dapat menikmati wahana dengan lebih aman dan nyaman.",
     coordinates: [-7.8095653793177044, 112.53023350845503],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8095653793177044, 112.53023350845503",
+    gmapsUrl: "https://maps.app.goo.gl/7igasrCJtLssKQt58",
     category: "fasilitas",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/lain-lain/penitipanbarang.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "14",
-    name: "Area Gathering 1 (Aspergillus)",
-    description:
-      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
-    coordinates: [-7.809118246338867, 112.52989207280568],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809118246338867, 112.52989207280568",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "15",
-    name: "Area Gathering 2 (Rivulosa)",
-    description:
-      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
-    coordinates: [-7.808999789760043, 112.52991460797314],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808999789760043, 112.52991460797314",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "16",
-    name: "Area Gathering 3 (Onusta)",
-    description:
-      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
-    coordinates: [-7.8088396852639015, 112.52988309201871],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8088396852639015, 112.52988309201871",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "17",
-    name: "Area Gathering 4 (Spreta)",
-    description:
-      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
-    coordinates: [-7.80868821704833, 112.52987303373247],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.80868821704833, 112.52987303373247",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "18",
-    name: "Area Gathering 5 (Boletus)",
-    description:
-      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
-    coordinates: [-7.808577937524032, 112.52983615335934],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808577937524032, 112.52983615335934",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "19",
-    name: "Area Gathering 6 (Sebelah Oyster Coaster – Roller Coaster)",
-    description:
-      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
-    coordinates: [-7.808423379876274, 112.53132986046732],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808423379876274, 112.53132986046732",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "20",
-    name: "Smoking Area 1 (Boletus)",
-    description:
-      "Area khusus merokok yang terletak di bagian belakang area gathering untuk menjaga kenyamanan pengunjung.",
-    coordinates: [-7.808508217023318, 112.5299850717761],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808508217023318, 112.5299850717761",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "21",
-    name: "Driver Rest Room",
-    description:
-      "Area istirahat khusus pengemudi rombongan agar dapat beristirahat dengan nyaman sebelum melanjutkan perjalanan.",
-    coordinates: [-7.809898982860404, 112.53075833744178],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809898982860404, 112.53075833744178",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "22",
-    name: "Ostreatus – Istana Balon",
-    description:
-      "Wahana bermain berbentuk istana balon yang menawarkan aktivitas melompat dan bergerak dengan suasana ceria bagi anak-anak.",
-    coordinates: [-7.808914086012019, 112.52973078290046],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808914086012019, 112.52973078290046",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "23",
-    name: "Portobello – Trampolin",
-    description:
-      "Area trampolin untuk melompat, bergerak aktif, dan menikmati permainan yang menyenangkan.",
-    coordinates: [-7.808672621896301, 112.52968931177823],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808672621896301, 112.52968931177823",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "24",
-    name: "Tiram – Busy Cowboy",
-    description:
-      "Wahana bertema koboi yang membawa pengunjung berputar dalam suasana seru dan menyenangkan.",
-    coordinates: [-7.808403051054199, 112.52966636615105],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808403051054199, 112.52966636615105",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "25",
-    name: "Matsutake – Watermelon Chair",
-    description:
-      "Wahana kursi bertema semangka dengan desain ceria yang memberikan pengalaman bermain menyenangkan.",
-    coordinates: [-7.80848270735792, 112.52978631012438],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.80848270735792, 112.52978631012438",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "26",
-    name: "Neurospora – Octopus",
-    description:
-      "Wahana berbentuk gurita yang membawa pengunjung bergerak naik, turun, dan berputar secara bersamaan.",
-    coordinates: [-7.808464425413712, 112.52985880374796],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808464425413712, 112.52985880374796",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "27",
-    name: "Agaricus – Playground Indoor",
-    description:
-      "Area bermain dalam ruangan dengan berbagai permainan anak yang nyaman dan terlindung dari panas maupun hujan.",
-    coordinates: [-7.808315007665705, 112.52966006380872],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808315007665705, 112.52966006380872",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "28",
-    name: "Zygomycota – Rabbit Park",
-    description:
-      "Area interaksi bertema kelinci yang memberikan pengalaman edukatif dan menyenangkan bagi anak-anak dan keluarga.",
-    coordinates: [-7.808263536744047, 112.52986972799911],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808263536744047, 112.52986972799911",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "29",
-    name: "Meriplus – Golfcar",
-    description:
-      "Wahana berkendara menggunakan kendaraan mini bergaya golf car pada lintasan yang telah disediakan.",
-    coordinates: [-7.808065007377382, 112.52999960838682],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808065007377382, 112.52999960838682",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "30",
-    name: "Saccharomyces – Playground Outdoor",
-    description:
-      "Area bermain luar ruangan yang menyediakan berbagai aktivitas fisik dan permainan untuk anak-anak.",
-    coordinates: [-7.807925302449038, 112.52979736563377],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807925302449038, 112.52979736563377",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "31",
-    name: "Brumale – Go Kart",
-    description:
-      "Wahana balap go-kart yang mengajak pengunjung merasakan pengalaman berkendara dan berkompetisi di lintasan.",
-    coordinates: [-7.80749992283028, 112.52989885221402],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.80749992283028, 112.52989885221402",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "32",
-    name: "Shimeji – Wanky Worm Train",
-    description:
-      "Kereta mini bertema ulat yang berjalan mengelilingi lintasan dan cocok dinikmati oleh anak-anak bersama keluarga.",
-    coordinates: [-7.8075270316893155, 112.52964282056654],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8075270316893155, 112.52964282056654",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "33",
-    name: "Silvicola – Waterpark",
-    description:
-      "Area permainan air dengan berbagai fasilitas yang menyegarkan dan menyenangkan bagi anak-anak serta keluarga.",
-    coordinates: [-7.807484432401996, 112.52980894792589],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807484432401996, 112.52980894792589",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "34",
-    name: "Bovista – Rumah Hantu",
-    description:
-      "Wahana bertema horor dengan suasana gelap, kejutan, dan dekorasi menyeramkan yang menguji keberanian pengunjung.",
-    coordinates: [-7.807445705738417, 112.52993207766438],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807445705738417, 112.52993207766438",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "35",
-    name: "Ascomycota – Break Star Dance",
-    description:
-      "Wahana dengan gondola yang berputar dan berubah arah secara dinamis, memberikan sensasi seperti berdansa.",
-    coordinates: [-7.807512544881149, 112.53043232919931],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807512544881149, 112.53043232919931",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "36",
-    name: "Obliquus – Passion Jump",
-    description:
-      "Wahana yang membawa pengunjung berputar sambil bergerak naik dan turun dalam suasana seru.",
-    coordinates: [-7.807751643232469, 112.5305594553417],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807751643232469, 112.5305594553417",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "37",
-    name: "Bassiana – Turn Table",
-    description:
-      "Wahana berbentuk piringan dengan deretan kursi yang berputar serta bergerak naik dan turun.",
-    coordinates: [-7.807709188075156, 112.53075151219606],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807709188075156, 112.53075151219606",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "38",
-    name: "Trametes – Flying Chair",
-    description:
-      "Wahana kursi gantung yang berputar hingga terayun ke arah luar, memberikan sensasi terbang di udara.",
-    coordinates: [-7.807485971335728, 112.53059057945926],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807485971335728, 112.53059057945926",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "39",
-    name: "Poria – Mega Disco",
-    description:
-      "Wahana berbentuk piringan besar yang berputar sambil bergerak miring serta naik dan turun.",
-    coordinates: [-7.807342474585636, 112.5307085965263],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807342474585636, 112.5307085965263",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "40",
-    name: "Camemberti – Flying Tower",
-    description:
-      "Wahana kursi gantung yang naik mengelilingi menara sambil berputar di ketinggian.",
-    coordinates: [-7.807438138840265, 112.53082393158789],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807438138840265, 112.53082393158789",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "41",
-    name: "Lactarius – Bianglala",
-    description:
-      "Wahana roda raksasa yang menawarkan pengalaman santai sekaligus pemandangan kawasan Mikutopia dari ketinggian.",
-    coordinates: [-7.807807509531002, 112.53096340705163],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807807509531002, 112.53096340705163",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "42",
-    name: "Tubulosa – Flying Bee",
-    description:
-      "Wahana bertema lebah yang bergerak naik, turun, dan berputar sehingga cocok dinikmati bersama keluarga.",
-    coordinates: [-7.808119682646415, 112.5313006082372],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808119682646415, 112.5313006082372",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "43",
-    name: "Oyster Coaster – Roller Coaster",
-    description:
-      "Wahana kereta luncur dengan lintasan berkelok yang memberikan sensasi cepat, menegangkan, dan penuh keseruan.",
-    coordinates: [-7.808362967435443, 112.53082100410447],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808362967435443, 112.53082100410447",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "44",
-    name: "Rusulla – Happy Car",
-    description:
-      "Wahana berbentuk mobil mini yang bergerak berputar dan bergoyang, memberikan pengalaman seru dan menyenangkan.",
-    coordinates: [-7.808612376956659, 112.53096086226586],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808612376956659, 112.53096086226586",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "45",
-    name: "Auricularia – Pirate Ship",
-    description:
-      "Wahana berbentuk kapal bajak laut yang berayun ke depan dan belakang untuk memberikan sensasi mendebarkan.",
-    coordinates: [-7.808379268738212, 112.53076670646819],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808379268738212, 112.53076670646819",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "46",
-    name: "Caloplaca – Tower Drop",
-    description:
-      "Wahana menara yang membawa pengunjung naik sebelum turun secara cepat dan memberikan sensasi memacu adrenalin.",
-    coordinates: [-7.808345036118304, 112.53066304730159],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808345036118304, 112.53066304730159",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "47",
-    name: "Nameko – Gabonese",
-    description:
-      "Wahana kendaraan mini yang dapat dinaiki bersama keluarga dengan gerakan santai dan menyenangkan.",
-    coordinates: [-7.808211102750889, 112.5305288591559],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808211102750889, 112.5305288591559",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "48",
-    name: "Truffle – Bom-Bom Car",
-    description:
-      "Wahana mobil listrik yang dapat dikendarai untuk berkeliling dan saling beradu secara aman di dalam arena.",
-    coordinates: [-7.808343124676138, 112.53052447830382],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808343124676138, 112.53052447830382",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "49",
-    name: "Crispa – Carousel",
-    description:
-      "Wahana komidi putar dengan kendaraan dan ornamen menarik yang bergerak mengelilingi arena.",
-    coordinates: [-7.808330455168656, 112.53029003025634],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808330455168656, 112.53029003025634",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "50",
-    name: "Morchella – Pendulum",
-    description:
-      "Wahana berbentuk pendulum yang berayun dari sisi ke sisi serta memberikan sensasi ketinggian dan kecepatan.",
-    coordinates: [-7.80851336703126, 112.53030362339909],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.80851336703126, 112.53030362339909",
-    category: "wahana",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "51",
+    id: "4",
     name: "Merchandise Hirsute",
     description:
-      "Toko yang menyediakan berbagai suvenir, aksesori, dan produk khas Mikutopia sebagai kenang-kenangan.",
+      "Toko yang menyediakan berbagai souvenir, aksesori, dan produk khas Mikutopia sebagai kenang-kenangan.",
     coordinates: [-7.809320773450869, 112.530043000807],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809320773450869, 112.530043000807",
-    category: "fasilitas",
+    gmapsUrl: "https://maps.app.goo.gl/pw76iWcHwGfJSMnz9",
+    category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: [
+      "/merchandise/hirsute1.webp",
+      "/merchandise/hirsute2.webp",
+      "/merchandise/hirsute3.webp",
+      "/merchandise/hirsute4.webp",
+    ],
+    hasDetailPage: false,
   },
   {
-    id: "52",
+    id: "5",
     name: "Merchandise Sinensis",
     description:
-      "Toko yang menyediakan berbagai suvenir, aksesori, dan produk khas Mikutopia sebagai kenang-kenangan.",
+      "Toko yang menyediakan berbagai souvenir, aksesori, dan produk khas Mikutopia sebagai kenang-kenangan.",
     coordinates: [-7.809251014242817, 112.53007384806567],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809251014242817, 112.53007384806567",
-    category: "fasilitas",
+    gmapsUrl: "https://maps.app.goo.gl/bE3Q7vxWqb6kr7sN7",
+    category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: [
+      "/merchandise/sinensis1.webp",
+      "/merchandise/sinensis2.webp",
+      "/merchandise/sinensis3.webp",
+    ],
+    hasDetailPage: false,
   },
   {
-    id: "53",
+    id: "6",
     name: "Cafe Enoki",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.809140202217053, 112.52985988238873],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809140202217053, 112.52985988238873",
+    gmapsUrl: "https://maps.app.goo.gl/K2YHzi2tr7wy5v2o6",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/enoki.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "54",
+    id: "7",
+    name: "Toilet",
+    description:
+      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di dekat area food court.",
+    coordinates: [-7.8091441899761564, 112.52972839621454],
+    gmapsUrl: "https://maps.app.goo.gl/fYp3WTm2MJD4qVePA",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/toilet/toilet1.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "8",
     name: "Cafe Lingzhi",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.809068422546487, 112.52976059691028],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809068422546487, 112.52976059691028",
+    gmapsUrl: "https://maps.app.goo.gl/PfGtFd8ktV5dvvtGA",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/lingzhi.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "55",
-    name: "Cafe Micoriza",
+    id: "9",
+    name: "Ostreatus - Istana Balon",
+    description:
+      "Wahana bermain berbentuk istana balon yang menawarkan aktivitas melompat dan bergerak dengan suasana ceria bagi anak-anak.",
+    coordinates: [-7.808914086012019, 112.52973078290046],
+    gmapsUrl: "https://maps.app.goo.gl/t1BtLK36ABNgJApn9",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/ostreatus.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "10",
+    name: "Cafe Mikoriza",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.8087865205214815, 112.52971779998306],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8087865205214815, 112.52971779998306",
+    gmapsUrl: "https://maps.app.goo.gl/4X3fRn1rSKS4oRjw5",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/mikoriza.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "56",
+    id: "11",
+    name: "Portobello - Trampolin",
+    description:
+      "Area trampolin untuk melompat, bergerak aktif, dan menikmati permainan yang menyenangkan.",
+    coordinates: [-7.808672621896301, 112.52968931177823],
+    gmapsUrl: "https://maps.app.goo.gl/CTuwHspUjjPnQjBh8",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/portobello.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "12",
+    name: "Food Court",
+    description:
+      "Area duduk dan makan bersama yang dikelilingi kafe-kafe serta dilengkapi hiburan live music.",
+    coordinates: [-7.808920734019314, 112.52981000182383],
+    gmapsUrl: "https://maps.app.goo.gl/VN2EM4sWgN2ttSBk6",
+    category: "fasilitas",
+    zoom: 21,
+    images: [
+      "/foodcourt/foodcourt1.webp",
+      "/foodcourt/foodcourt2.webp",
+      "/foodcourt/foodcourt3.webp",
+      "/foodcourt/foodcourt4.webp",
+      "/foodcourt/foodcourt5.webp",
+    ],
+    hasDetailPage: false,
+  },
+  {
+    id: "13",
+    name: "Area Gathering Aspergillus",
+    description:
+      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
+    coordinates: [-7.809118246338867, 112.52989207280568],
+    gmapsUrl: "https://maps.app.goo.gl/BLCKEgJdvFCjq5pM7",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/gathering/aspergillus.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "14",
+    name: "Area Gathering Rivulosa",
+    description:
+      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
+    coordinates: [-7.808999789760043, 112.52991460797314],
+    gmapsUrl: "https://maps.app.goo.gl/JbDsREp6bqWGPMP78",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/gathering/rivulosa.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "15",
+    name: "Area Gathering Onusta",
+    description:
+      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
+    coordinates: [-7.8088396852639015, 112.52988309201871],
+    gmapsUrl: "https://maps.app.goo.gl/jTyFEwKNgAB2wZSa6",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/gathering/onusta.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "16",
+    name: "Area Gathering Spreta",
+    description:
+      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
+    coordinates: [-7.80868821704833, 112.52987303373247],
+    gmapsUrl: "https://maps.app.goo.gl/jP6QeQJfWCAp4xSr6",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/gathering/spreta.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "17",
+    name: "Area Gathering Boletus",
+    description:
+      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok.",
+    coordinates: [-7.808577937524032, 112.52983615335934],
+    gmapsUrl: "https://maps.app.goo.gl/2VE8ZnjCwXy5YLhs5",
+    category: "fasilitas",
+    zoom: 21,
+    images: [
+      "/gathering/boletus.webp",
+      "/gathering/gathering1.webp",
+      "/gathering/gathering2.webp",
+      "/gathering/gathering3.webp",
+    ],
+    hasDetailPage: false,
+  },
+  {
+    id: "18",
+    name: "Smoking Area",
+    description:
+      "Area khusus merokok yang terletak di bagian belakang area gathering untuk menjaga kenyamanan pengunjung.",
+    coordinates: [-7.808508217023318, 112.5299850717761],
+    gmapsUrl: "https://maps.app.goo.gl/xD8nB9ceHXfQf1xc7",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/smoking/smoking1.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "19",
     name: "Cafe Shitake",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
-    coordinates: [-7.8082824979309216, 112.52963133004373],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8082824979309216, 112.52963133004373",
+    coordinates: [-7.808566444472888, 112.52966321102924],
+    gmapsUrl: "https://maps.app.goo.gl/FmAxGRBXAYeHzXGJ8",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/shitake.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "57",
+    id: "20",
+    name: "Tiram - Busy Cowboy",
+    description:
+      "Wahana bertema koboi yang membawa pengunjung berputar dalam suasana seru dan menyenangkan.",
+    coordinates: [-7.808404629813931, 112.52963923676877],
+    gmapsUrl: "https://maps.app.goo.gl/GM6nDR3yTGhMohBu8",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/tiram.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "21",
+    name: "Matsutake - Watermelon Chair",
+    description:
+      "Wahana kursi bertema semangka dengan desain ceria yang memberikan pengalaman bermain menyenangkan.",
+    coordinates: [-7.80848270735792, 112.52978631012438],
+    gmapsUrl: "https://maps.app.goo.gl/aAZoJqLoJAdBRoi49",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/matsutake.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "22",
+    name: "Neurospora - Octopus",
+    description:
+      "Wahana berbentuk gurita yang membawa pengunjung bergerak naik, turun, dan berputar secara bersamaan.",
+    coordinates: [-7.808464425413712, 112.52985880374796],
+    gmapsUrl: "https://maps.app.goo.gl/JMKmY3Jh8aCwWbGm9",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/neurospora.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "23",
+    name: "Toilet",
+    description:
+      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di dekat wahana tiram dan matsutake.",
+    coordinates: [-7.808289186022769, 112.52955696647678],
+    gmapsUrl: "https://maps.app.goo.gl/nqfk7e6JfvChkmLM6",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/toilet/toilet2.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "24",
+    name: "Agaricus - Playground Indoor",
+    description:
+      "Area bermain dalam ruangan dengan berbagai permainan anak yang nyaman dan terlindung dari panas maupun hujan.",
+    coordinates: [-7.808285104438218, 112.52965808801873],
+    gmapsUrl: "https://maps.app.goo.gl/JSbTQoNy74d1AdxR9",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/agaricus.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "25",
+    name: "Zygomycota - Rabbit Park",
+    description:
+      "Area interaksi yang memungkinkan pengunjung bermain dan berinteraksi langsung dengan kelinci dalam suasana menyenangkan.",
+    coordinates: [-7.808263536744047, 112.52986972799911],
+    gmapsUrl: "https://maps.app.goo.gl/c3LHzUrKCyVavk5Y8",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/zygomycota.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "26",
+    name: "Meriplus - Golfcar",
+    description:
+      "Wahana berkeliling kawasan Mikutopia menggunakan kendaraan mini bergaya golf car.",
+    coordinates: [-7.808065007377382, 112.52999960838682],
+    gmapsUrl: "https://maps.app.goo.gl/gxDKZK3Wr9KtTDQ17",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/meriplus.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "27",
+    name: "Photo Box Studio",
+    description:
+      "Studio foto dengan pilihan latar dan konsep menarik untuk mengabadikan momen bersama keluarga atau teman.",
+    coordinates: [-7.8080520530178905, 112.53018468115366],
+    gmapsUrl: "https://maps.app.goo.gl/HT8vrAPfStuX5M5F8",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/lain-lain/photobox.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "28",
+    name: "Saccharomyces - Playground Outdoor",
+    description:
+      "Area bermain luar ruangan yang menyediakan berbagai aktivitas fisik dan permainan untuk anak-anak.",
+    coordinates: [-7.807925302449038, 112.52979736563377],
+    gmapsUrl: "https://maps.app.goo.gl/Ji77fcN27ZgmSz7dA",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/saccharomyces.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "29",
+    name: "Masjid",
+    description:
+      "Fasilitas ibadah bagi pengunjung dan rombongan untuk melaksanakan salat serta kegiatan keagamaan dengan nyaman dan tertib.",
+    coordinates: [-7.80763230591512, 112.52984695810417],
+    gmapsUrl: "https://maps.app.goo.gl/wizqviQkqimYqZpW6",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/lain-lain/masjid.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "30",
+    name: "Brumale - Go Kart",
+    description:
+      "Wahana balap go-kart yang mengajak pengunjung merasakan pengalaman berkendara dan berkompetisi di lintasan.",
+    coordinates: [-7.807358459087984, 112.52993155316855],
+    gmapsUrl: "https://maps.app.goo.gl/8dAHewBYDFDbh1Vu6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/brumale.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "31",
+    name: "Shimeji - Wanky Worm Train",
+    description:
+      "Kereta mini bertema ulat yang berjalan mengelilingi lintasan dan cocok dinikmati oleh anak-anak bersama keluarga.",
+    coordinates: [-7.8075270316893155, 112.52964282056654],
+    gmapsUrl: "https://maps.app.goo.gl/rvwceKD8UrwLr2rw6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/shimeji.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "32",
+    name: "Silvicola - Waterpark (Coming Soon)",
+    description:
+      "Area permainan air dengan berbagai fasilitas yang menyegarkan dan menyenangkan bagi anak-anak serta keluarga.",
+    coordinates: [-7.807231091471759, 112.52984404622956],
+    gmapsUrl: "https://maps.app.goo.gl/1rXkUw7xgsNtSXmZ9",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/silvicola.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "33",
+    name: "Bovista - Rumah Hantu (Coming Soon)",
+    description:
+      "Wahana bertema horor dengan suasana gelap, kejutan, dan dekorasi menyeramkan yang menguji keberanian pengunjung.",
+    coordinates: [-7.807331528687933, 112.53033373557223],
+    gmapsUrl: "https://maps.app.goo.gl/X7tYymufDCP2QBCM7",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/bovista.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "34",
+    name: "Smoking Area",
+    description:
+      "Area khusus merokok yang terletak di dekat wahana ascomycota untuk menjaga kenyamanan pengunjung.",
+    coordinates: [-7.8074828447673585, 112.53037920067102],
+    gmapsUrl: "https://maps.app.goo.gl/cVoQN6hWgd4zEZrJ7",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/smoking/smoking4.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "35",
+    name: "Ascomycota - Break Star Dance",
+    description:
+      "Wahana dengan gondola yang berputar dan berubah arah secara dinamis, memberikan sensasi seperti berdansa.",
+    coordinates: [-7.807512544881149, 112.53043232919931],
+    gmapsUrl: "https://maps.app.goo.gl/xqfF4CtJcaxzWURb7",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/ascomycota.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "36",
     name: "Cafe Mellea",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.807939304517873, 112.53032336110655],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807939304517873, 112.53032336110655",
+    gmapsUrl: "https://maps.app.goo.gl/v3sbEBnsYpXPHuB97",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/mellea1.webp", "/cafe/mellea2.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "58",
-    name: "Cafe Kokacap",
+    id: "37",
+    name: "Ruang Laktasi & Toilet",
+    description:
+      "Ruang khusus yang aman, nyaman, dan privat bagi ibu untuk menyusui atau memenuhi kebutuhan bayi, dilengkapi toilet, serta terletak di dalam area kafe mellea.",
+    coordinates: [-7.807952262771271, 112.5303008207694],
+    gmapsUrl: "https://maps.app.goo.gl/3uoh8n3ob7aRwYu39",
+    category: "fasilitas",
+    zoom: 21,
+    images: [
+      "/laktasi_p3k/laktasi_mellea1.webp",
+      "/laktasi_p3k/laktasi_mellea2.webp",
+      "/toilet/toilet3.webp",
+    ],
+    hasDetailPage: false,
+  },
+  {
+    id: "38",
+    name: "Obliquus - Passion Jump",
+    description:
+      "Wahana yang membawa pengunjung berputar sambil bergerak naik dan turun dalam suasana seru.",
+    coordinates: [-7.807751643232469, 112.5305594553417],
+    gmapsUrl: "https://maps.app.goo.gl/4YryJFhBA57qxseh6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/obliquus.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "39",
+    name: "Cafe Kokocap",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.807675972923422, 112.53059560033718],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807675972923422, 112.53059560033718",
+    gmapsUrl: "https://maps.app.goo.gl/oaSWzvcv7gRTunkk9",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/kokocap1.webp", "/cafe/kokocap2.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "59",
+    id: "40",
+    name: "Bassiana - Turn Table",
+    description:
+      "Wahana berbentuk piringan dengan deretan kursi yang berputar serta bergerak naik dan turun.",
+    coordinates: [-7.807709188075156, 112.53075151219606],
+    gmapsUrl: "https://maps.app.goo.gl/Lqj3xpJAgGaxGJrU6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/bassiana.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "41",
+    name: "Trametes - Flying Chair",
+    description:
+      "Wahana kursi gantung yang berputar hingga terayun ke arah luar, memberikan sensasi terbang di udara.",
+    coordinates: [-7.807485971335728, 112.53059057945926],
+    gmapsUrl: "https://maps.app.goo.gl/Ngu8YP9PEByb4fLb6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/trametes.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "42",
     name: "Minimart Tsugae",
     description:
       "Toko yang menyediakan minuman, makanan ringan, kebutuhan pribadi, dan perlengkapan praktis bagi pengunjung.",
     coordinates: [-7.807459516400737, 112.53054701981601],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807459516400737, 112.53054701981601",
-    category: "fasilitas",
+    gmapsUrl: "https://maps.app.goo.gl/cZDM4Ji4NvZUKdnx5",
+    category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/tsugae.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "60",
+    id: "43",
+    name: "Poria - Mega Disco",
+    description:
+      "Wahana berbentuk piringan besar yang berputar sambil bergerak miring serta naik dan turun.",
+    coordinates: [-7.807342474585636, 112.5307085965263],
+    gmapsUrl: "https://maps.app.goo.gl/dUU2ycwgQcak6esp6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/poria.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "44",
+    name: "Camemberti - Flying Tower",
+    description:
+      "Wahana kursi gantung yang naik mengelilingi menara sambil berputar di ketinggian.",
+    coordinates: [-7.807438138840265, 112.53082393158789],
+    gmapsUrl: "https://maps.app.goo.gl/h2dA8GrBSEbbC28N7",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/camemberti.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "45",
+    name: "Lactarius - Bianglala",
+    description:
+      "Wahana roda raksasa yang menawarkan pengalaman santai sekaligus pemandangan kawasan Mikutopia dari ketinggian.",
+    coordinates: [-7.807807509531002, 112.53096340705163],
+    gmapsUrl: "https://maps.app.goo.gl/71sFTc2j9DH9aQyVA",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/lactarius.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "46",
+    name: "Toilet",
+    description:
+      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di bawah wahana lactarius.",
+    coordinates: [-7.807973696913775, 112.53094125494312],
+    gmapsUrl: "https://maps.app.goo.gl/SCrsCXoHyKP2sQW36",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/toilet/toilet4.webp", "/toilet/toilet4-1.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "47",
     name: "Cafe Lucidum",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.807659534555142, 112.5311557651895],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807659534555142, 112.5311557651895",
+    gmapsUrl: "https://maps.app.goo.gl/XQB5jqjBa2thrPPp9",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/lucidum.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "61",
+    id: "48",
     name: "Cafe Porcini",
     description:
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.808093817750622, 112.53126457474016],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808093817750622, 112.53126457474016",
+    gmapsUrl: "https://maps.app.goo.gl/aGhbNo9vff1uvjHM9",
     category: "caffe",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/cafe/porcini.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "62",
-    name: "Cafe Muscaria",
+    id: "49",
+    name: "Tremella - Rainbow Slide (Coming Soon)",
     description:
-      "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
-    coordinates: [-7.808455038622844, 112.53064383366967],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808455038622844, 112.53064383366967",
-    category: "caffe",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "63",
-    name: "Cafe Grifola",
-    description:
-      "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
-    coordinates: [-7.808756871675095, 112.5313631068441],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808756871675095, 112.5313631068441",
-    category: "caffe",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "64",
-    name: "Pusat Oleh-Oleh",
-    description:
-      "Tempat berbelanja berbagai makanan, produk lokal, suvenir, dan buah tangan untuk dibawa pulang.",
-    coordinates: [-7.809295024254639, 112.53076405081491],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809295024254639, 112.53076405081491",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "65",
-    name: "Titik Kumpul (Dekat Parkiran)",
-    description:
-      "Lokasi yang mudah dikenali sebagai tempat berkumpul kembali dengan rombongan serta menjadi titik evakuasi saat keadaan darurat.",
-    coordinates: [-7.810220352580671, 112.53045332746169],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.810220352580671, 112.53045332746169",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "66",
-    name: "Titik Kumpul (Dekat Cafe Mellea)",
-    description:
-      "Lokasi yang mudah dikenali sebagai tempat berkumpul kembali dengan rombongan serta menjadi titik evakuasi saat keadaan darurat.",
-    coordinates: [-7.807861103031882, 112.53022348636331],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807861103031882, 112.53022348636331",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "67",
-    name: "Titik Kumpul (Deket Cafe Grifola)",
-    description:
-      "Lokasi yang mudah dikenali sebagai tempat berkumpul kembali dengan rombongan serta menjadi titik evakuasi saat keadaan darurat.",
-    coordinates: [-7.8087253, 112.5306365],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8087253, 112.5306365",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "68",
-    name: "Titik Kumpul (Dekat Gate Masuk)",
-    description:
-      "Lokasi yang mudah dikenali sebagai tempat berkumpul kembali dengan rombongan serta menjadi titik evakuasi saat keadaan darurat.",
-    coordinates: [-7.809544980390296, 112.53063583802916],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809544980390296, 112.53063583802916",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "69",
-    name: "Photo Box Studio",
-    description:
-      "Studio foto dengan pilihan latar dan konsep menarik untuk mengabadikan momen bersama keluarga atau teman.",
-    coordinates: [-7.807643412581862, 112.5298861766613],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.807643412581862, 112.5298861766613",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "70",
-    name: "Video 360",
-    description:
-      "Fasilitas pembuatan video dari sudut 360 derajat yang menghasilkan dokumentasi unik, dinamis, dan menarik.",
-    coordinates: [-7.8086682, 112.53055],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8086682, 112.5305500",
-    category: "fasilitas",
-    zoom: 21,
-    images: ["/wahana/crispa.webp"],
-  },
-  {
-    id: "71",
-    name: "Budidaya Jamur",
-    description:
-      "Area edukasi yang memperkenalkan proses penanaman, perawatan, dan pemanfaatan berbagai jenis jamur.",
-    coordinates: [-7.8076471, 112.5302436],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.8076471, 112.5302436",
+      "Perosotan warna-warni yang mengajak pengunjung meluncur dari ketinggian dalam suasana ceria.",
+    coordinates: [-7.8077050281658, 112.53125782076437],
+    gmapsUrl: "https://maps.app.goo.gl/8if8bP5K8JaV4pMf9",
     category: "wahana",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/wahana/tremella.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "72",
+    id: "50",
+    name: "Tubulosa - Flying Bee",
+    description:
+      "Wahana bertema lebah yang bergerak naik, turun, dan berputar sehingga cocok dinikmati bersama keluarga.",
+    coordinates: [-7.808119682646415, 112.5313006082372],
+    gmapsUrl: "https://maps.app.goo.gl/PjRP58ZwZzJk61Bt5",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/tubulosa.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "51",
+    name: "Area Gathering Luar",
+    description:
+      "Area berkumpul untuk keluarga, sekolah, komunitas, dan rombongan dalam melakukan pengarahan, beristirahat, atau menunggu anggota kelompok, yang terletak di luar ruangan.",
+    coordinates: [-7.808423379876274, 112.53132986046732],
+    gmapsUrl: "https://maps.app.goo.gl/fD3QCL1VHwceCCGp8",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/gathering/gathering4.webp", "/gathering/gathering5.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "52",
+    name: "Smoking Area",
+    description:
+      "Area khusus merokok yang terletak di bagian bawah area gathering untuk menjaga kenyamanan pengunjung.",
+    coordinates: [-7.808528435690763, 112.53132655965032],
+    gmapsUrl: "https://maps.app.goo.gl/tzDp9uFkXm3QgqhE7",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/smoking/smoking2.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "53",
+    name: "Oyster Coaster - Roller Coaster",
+    description:
+      "Wahana kereta luncur dengan lintasan berkelok yang memberikan sensasi cepat, menegangkan, dan penuh keseruan.",
+    coordinates: [-7.808140211247514, 112.5308254784068],
+    gmapsUrl: "https://maps.app.goo.gl/N7PgePmxKW1rkoqN6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/oyster.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "54",
+    name: "Rusulla - Happy Car",
+    description:
+      "Wahana berbentuk mobil mini yang bergerak berputar dan bergoyang, memberikan pengalaman seru dan menyenangkan.",
+    coordinates: [-7.808612376956659, 112.53096086226586],
+    gmapsUrl: "https://maps.app.goo.gl/vS3s7j3Vskvve6Cw5",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/rusulla.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "55",
     name: "Miku Theater",
     description:
       "Area pertunjukan dan hiburan yang menyajikan tayangan atau kegiatan menarik bagi pengunjung Mikutopia.",
     coordinates: [-7.808756871675095, 112.5313631068441],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808756871675095, 112.5313631068441",
+    gmapsUrl: "https://maps.app.goo.gl/N5BKwyYjd85XnHmWA",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/theater/theater1.webp", "/theater/theater2.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "56",
+    name: "Auricularia - Pirate Ship",
+    description:
+      "Wahana berbentuk kapal bajak laut yang berayun ke depan dan belakang untuk memberikan sensasi mendebarkan.",
+    coordinates: [-7.808379268738212, 112.53076670646819],
+    gmapsUrl: "https://maps.app.goo.gl/EfRTYSGuVRUd4m3g6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/auricularia.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "57",
+    name: "Caloplaca - Tower Drop",
+    description:
+      "Wahana menara yang membawa pengunjung naik sebelum turun secara cepat dan memberikan sensasi memacu adrenalin.",
+    coordinates: [-7.808345036118304, 112.53066304730159],
+    gmapsUrl: "https://maps.app.goo.gl/WopMVXjuHJW5n81b8",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/caloplaca.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "58",
+    name: "Nameko - Gabonese",
+    description:
+      "Wahana kendaraan mini yang dapat dinaiki bersama keluarga dengan gerakan santai dan menyenangkan.",
+    coordinates: [-7.808211102750889, 112.5305288591559],
+    gmapsUrl: "https://maps.app.goo.gl/iFcvrtooHyDJVD1Q6",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/nameko.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "59",
+    name: "Smoking Area",
+    description:
+      "Area khusus merokok yang terletak di lembah miku dekat budidaya jamur untuk menjaga kenyamanan pengunjung.",
+    coordinates: [-7.808193942236402, 112.53049701825668],
+    gmapsUrl: "https://maps.app.goo.gl/swL4XbRszERC9XkG7",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/smoking/smoking3.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "60",
+    name: "Budidaya Jamur (Coming Soon)",
+    description:
+      "Area edukasi yang memperkenalkan proses penanaman, perawatan, dan pemanfaatan berbagai jenis jamur.",
+    coordinates: [-7.808208078558405, 112.53044172784021],
+    gmapsUrl: "https://maps.app.goo.gl/uc1yPBVnGpgdoLuf6",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/lain-lain/budidayajamur.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "61",
+    name: "Truffle - Bom-Bom Car",
+    description:
+      "Wahana mobil listrik yang dapat dikendarai untuk berkeliling dan saling beradu secara aman di dalam arena.",
+    coordinates: [-7.808343124676138, 112.53052447830382],
+    gmapsUrl: "https://maps.app.goo.gl/SMmWRUasyB7ScV3L7",
+    category: "wahana",
+    zoom: 21,
+    images: ["/wahana/truffle1.webp", "/wahana/truffle2.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "62",
+    name: "Toilet",
+    description:
+      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di area lembah miku.",
+    coordinates: [-7.8085003803415125, 112.53054332288387],
+    gmapsUrl: "https://maps.app.goo.gl/5PsPMJhttG2V63de9",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/toilet/toilet5.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "63",
+    name: "Cafe Muscaria",
+    description:
+      "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
+    coordinates: [-7.808455038622844, 112.53064383366967],
+    gmapsUrl: "https://maps.app.goo.gl/gFudCfoFpAP4xLTN8",
+    category: "caffe",
+    zoom: 21,
+    images: ["/cafe/muscaria.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "64",
+    name: "Crispa - Carousel",
+    description:
+      "Wahana komidi putar dengan kendaraan dan ornamen menarik yang bergerak mengelilingi arena.",
+    coordinates: [-7.808330455168656, 112.53029003025634],
+    gmapsUrl: "https://maps.app.goo.gl/WohTDRCoRfsm94Wh9",
     category: "wahana",
     zoom: 21,
     images: ["/wahana/crispa.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "73",
-    name: "Ruang Staff (Staff Only)",
+    id: "65",
+    name: "Morchella - Pendulum",
     description:
-      "Ruangan operasional khusus petugas Mikutopia yang hanya dapat dimasuki oleh staf berkepentingan.",
-    coordinates: [-7.809467325806254, 112.53073655147439],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.809467325806254, 112.53073655147439",
-    category: "fasilitas",
+      "Wahana berbentuk pendulum yang berayun dari sisi ke sisi serta memberikan sensasi ketinggian dan kecepatan.",
+    coordinates: [-7.80851336703126, 112.53030362339909],
+    gmapsUrl: "https://maps.app.goo.gl/veXRcd5bt9psZzbS9",
+    category: "wahana",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/wahana/morchella.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "74",
-    name: "Food Court",
+    id: "66",
+    name: "Lepista - Glow In The Dark (Coming Soon)",
     description:
-      "Area tempat duduk dan makan bersama, dengan pilihan makanan dan minuman dari kafe di kawasan Mikutopia serta hiburan live music.",
-    coordinates: [-7.808920734019314, 112.52981000182383],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808920734019314, 112.52981000182383",
-    category: "fasilitas",
+      "Wahana dalam ruangan dengan dekorasi bercahaya dan efek visual menarik yang terlihat dalam kondisi gelap.",
+    coordinates: [-7.808810071837945, 112.53043664680227],
+    gmapsUrl: "https://maps.app.goo.gl/bLQqrwxZzCr2YiLb7",
+    category: "wahana",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/wahana/lepista.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "75",
-    name: "Ruang P3K & Laktasi (Dekat Morchella – Pendulum)",
+    id: "67",
+    name: "Ruang P3K dan Laktasi",
     description:
       "Ruangan terpadu yang menyediakan layanan pertolongan pertama serta tempat nyaman dan privat bagi ibu untuk menyusui atau merawat bayi.",
     coordinates: [-7.808836102177724, 112.53055575826045],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.808836102177724, 112.53055575826045",
+    gmapsUrl: "https://maps.app.goo.gl/TDgWxcE1dnsAt7wZ6",
     category: "fasilitas",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/laktasi_p3k/p3k_laktasi.webp"],
+    hasDetailPage: false,
   },
   {
-    id: "76",
-    name: "Masjid",
+    id: "68",
+    name: "Video 360",
     description:
-      "Fasilitas ibadah bagi pengunjung dan rombongan untuk melaksanakan salat serta kegiatan keagamaan dengan nyaman dan tertib.",
-    coordinates: [-7.80763012585445, 112.52988885887773],
-    gmapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=-7.80763012585445, 112.52988885887773",
+      "Fasilitas pembuatan video dari sudut 360 derajat yang menghasilkan dokumentasi unik, dinamis, dan menarik.",
+    coordinates: [-7.808646284629543, 112.5305371901481],
+    gmapsUrl: "https://maps.app.goo.gl/BKjz8pxCkbmrpaTT8",
     category: "fasilitas",
     zoom: 21,
-    images: ["/wahana/crispa.webp"],
+    images: ["/lain-lain/vid360.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "69",
+    name: "Cafe Grifolla",
+    description:
+      "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
+    coordinates: [-7.8086504312044935, 112.53109565922027],
+    gmapsUrl: "https://maps.app.goo.gl/5FRnqRU8msBjjWwE7",
+    category: "caffe",
+    zoom: 21,
+    images: ["/cafe/grifolla.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "70",
+    name: "Pusat Oleh-Oleh (Coming Soon)",
+    description:
+      "Tempat berbelanja berbagai makanan, produk lokal, souvenir, dan buah tangan untuk dibawa pulang.",
+    coordinates: [-7.809295024254639, 112.53076405081491],
+    gmapsUrl: "https://maps.app.goo.gl/CMsj6CfiDiQGv5bb6",
+    category: "caffe",
+    zoom: 21,
+    images: ["/cafe/oleholeh.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "71",
+    name: "Driver Rest Room & P3K",
+    description:
+      "Area istirahat khusus pengemudi rombongan yang dilengkapi pos pertolongan pertama bagi pengunjung yang membutuhkan bantuan medis.",
+    coordinates: [-7.809898982860404, 112.53075833744178],
+    gmapsUrl: "https://maps.app.goo.gl/4USj5u9W7zcmZVGYA",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/laktasi_p3k/driver_p3k.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "72",
+    name: "Mushola",
+    description:
+      "Tempat ibadah bagi pengunjung yang ingin melaksanakan salat dengan tenang dan nyaman selama berada di kawasan Mikutopia.",
+    coordinates: [-7.809714252780397, 112.5304874844475],
+    gmapsUrl: "https://maps.app.goo.gl/XLFZQuZcHZwodBY19",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/lain-lain/mushola.webp"],
+    hasDetailPage: false,
+  },
+  {
+    id: "73",
+    name: "Toilet",
+    description:
+      "Fasilitas toilet umum yang bersih dan nyaman, dilengkapi area cuci tangan, serta terletak di samping mushola.",
+    coordinates: [-7.80970172567823, 112.5307315926391],
+    gmapsUrl: "https://maps.app.goo.gl/amv9QTvKsHGHqe5r9",
+    category: "fasilitas",
+    zoom: 21,
+    images: ["/toilet/toilet6.webp"],
+    hasDetailPage: false,
   },
 ];
