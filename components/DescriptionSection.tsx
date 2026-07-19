@@ -6,23 +6,28 @@ export default function DescriptionSection() {
   const images = [
     {
       id: 1,
-      src: "/wahana/crispa.webp",
-      name: "Crispa",
+      src: "/wahana/brumale2.webp",
+      name: "Brumale",
     },
     {
       id: 2,
-      src: "/wahana/morchella.webp",
-      name: "Morchella",
+      src: "/wahana/trametes.webp",
+      name: "Trametes",
     },
     {
       id: 3,
-      src: "/wahana/truffle1.webp",
-      name: "Truffle",
+      src: "/wahana/lactarius1.webp",
+      name: "Lactarius",
     },
     {
       id: 4,
-      src: "/wahana/truffle2.webp",
-      name: "Truffle",
+      src: "/wahana/oyster.webp",
+      name: "Oyster Coaster",
+    },
+        {
+      id: 5,
+      src: "/wahana/poria.webp",
+      name: "Poria",
     },
   ];
 
