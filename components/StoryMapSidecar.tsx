@@ -157,14 +157,14 @@ export default function StoryMapSidecar() {
               markerColors =
                 spot.category === "wahana"
                   ? "bg-emerald-600 text-white ring-4 ring-emerald-500/40 z-50 scale-125"
-                  : spot.category === "caffe"
+                  : spot.category === "cafe"
                     ? "bg-amber-600 text-white ring-4 ring-amber-500/40 z-50 scale-125"
                     : "bg-blue-600 text-white ring-4 ring-blue-500/40 z-50 scale-125";
             } else {
               markerColors =
                 spot.category === "wahana"
                   ? "bg-emerald-400 text-emerald-950 scale-100 z-10"
-                  : spot.category === "caffe"
+                  : spot.category === "cafe"
                     ? "bg-amber-400 text-amber-950 scale-100 z-10"
                     : "bg-blue-400 text-blue-950 scale-100 z-10";
             }
@@ -254,14 +254,14 @@ export default function StoryMapSidecar() {
             </button>
 
             <button
-              onClick={() => setSelectedCategory("caffe")}
+              onClick={() => setSelectedCategory("cafe")}
               className={`flex-1 py-2 rounded-xl transition-all ${
-                selectedCategory === "caffe"
+                selectedCategory === "cafe"
                   ? "bg-amber-600 text-white shadow-md shadow-amber-600/10"
                   : "bg-amber-50 text-amber-700 hover:bg-amber-100/70"
               }`}
             >
-              Caffe
+              Cafe
             </button>
 
             <button
@@ -324,7 +324,7 @@ export default function StoryMapSidecar() {
                             className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                               spot.category === "wahana"
                                 ? "bg-emerald-100 text-emerald-800"
-                                : spot.category === "caffe"
+                                : spot.category === "cafe"
                                   ? "bg-amber-100 text-amber-800"
                                   : "bg-blue-100 text-blue-800"
                             }`}

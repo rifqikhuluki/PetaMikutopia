@@ -10,7 +10,7 @@ export interface Spot {
   coordinates: [number, number]; // [Latitude, Longitude]
   gmapsUrl: string;
   zoom: number;
-  category: "wahana" | "caffe" | "fasilitas";
+  category: "wahana" | "cafe" | "fasilitas";
   images: string[];
   hasDetailPage: boolean;
 }
@@ -63,7 +63,7 @@ export const spotsData: Spot[] = [
       "Toko yang menyediakan berbagai souvenir, aksesori, dan produk khas Mikutopia sebagai kenang-kenangan.",
     coordinates: [-7.809320773450869, 112.530043000807],
     gmapsUrl: "https://maps.app.goo.gl/pw76iWcHwGfJSMnz9",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: [
       "/merchandise/hirsute1.webp",
@@ -80,7 +80,7 @@ export const spotsData: Spot[] = [
       "Toko yang menyediakan berbagai souvenir, aksesori, dan produk khas Mikutopia sebagai kenang-kenangan.",
     coordinates: [-7.809251014242817, 112.53007384806567],
     gmapsUrl: "https://maps.app.goo.gl/bE3Q7vxWqb6kr7sN7",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: [
       "/merchandise/sinensis1.webp",
@@ -96,7 +96,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.809140202217053, 112.52985988238873],
     gmapsUrl: "https://maps.app.goo.gl/K2YHzi2tr7wy5v2o6",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/enoki.webp"],
     hasDetailPage: false,
@@ -120,7 +120,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.809068422546487, 112.52976059691028],
     gmapsUrl: "https://maps.app.goo.gl/PfGtFd8ktV5dvvtGA",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/lingzhi.webp"],
     hasDetailPage: false,
@@ -144,7 +144,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.8087865205214815, 112.52971779998306],
     gmapsUrl: "https://maps.app.goo.gl/4X3fRn1rSKS4oRjw5",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/mikoriza.webp"],
     hasDetailPage: false,
@@ -263,7 +263,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.808566444472888, 112.52966321102924],
     gmapsUrl: "https://maps.app.goo.gl/FmAxGRBXAYeHzXGJ8",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/shitake.webp"],
     hasDetailPage: false,
@@ -439,7 +439,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.807939304517873, 112.53032336110655],
     gmapsUrl: "https://maps.app.goo.gl/v3sbEBnsYpXPHuB97",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/mellea1.webp", "/cafe/mellea2.webp"],
     hasDetailPage: false,
@@ -479,7 +479,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.807675972923422, 112.53059560033718],
     gmapsUrl: "https://maps.app.goo.gl/oaSWzvcv7gRTunkk9",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/kokocap1.webp", "/cafe/kokocap2.webp"],
     hasDetailPage: false,
@@ -563,7 +563,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.807659534555142, 112.5311557651895],
     gmapsUrl: "https://maps.app.goo.gl/XQB5jqjBa2thrPPp9",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/lucidum.webp"],
     hasDetailPage: false,
@@ -575,7 +575,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.808093817750622, 112.53126457474016],
     gmapsUrl: "https://maps.app.goo.gl/aGhbNo9vff1uvjHM9",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/porcini.webp"],
     hasDetailPage: false,
@@ -731,7 +731,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.808455038622844, 112.53064383366967],
     gmapsUrl: "https://maps.app.goo.gl/gFudCfoFpAP4xLTN8",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/muscaria.webp"],
     hasDetailPage: false,
@@ -791,7 +791,7 @@ export const spotsData: Spot[] = [
       "Tempat bersantai yang menyediakan berbagai pilihan makanan dan minuman bagi pengunjung.",
     coordinates: [-7.8086504312044935, 112.53109565922027],
     gmapsUrl: "https://maps.app.goo.gl/5FRnqRU8msBjjWwE7",
-    category: "caffe",
+    category: "cafe",
     zoom: 21,
     images: ["/cafe/grifolla.webp"],
     hasDetailPage: false,
