@@ -15,10 +15,17 @@ export default function Footer() {
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
+            <div className="w-16 h-16 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
               <img
                 src="/Logo_Tulungrejo.webp"
                 alt="Logo Tulungrejo"
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <div className="w-16 h-16 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
+              <img
+                src="/Logo_Miku.webp"
+                alt="Logo Mikutopia"
                 className="h-full w-full object-contain"
               />
             </div>
