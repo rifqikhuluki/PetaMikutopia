@@ -771,7 +771,7 @@ export const spotsData: Spot[] = [
     gmapsUrl: "https://maps.app.goo.gl/TDgWxcE1dnsAt7wZ6",
     category: "fasilitas",
     zoom: 19,
-    images: ["/laktasi_p3k/p3k_laktasi.webp"],
+    images: ["/lain/laktasi4.webp","/lain/laktasi5.webp"],
     hasDetailPage: false,
   },
   {
