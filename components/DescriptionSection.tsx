@@ -6,28 +6,33 @@ export default function DescriptionSection() {
   const images = [
     {
       id: 1,
-      src: "/wahana/brumale2.webp",
-      name: "Brumale",
+      src: "/wahana/auricularia.webp",
+      name: "Auricularia",
     },
     {
       id: 2,
-      src: "/wahana/trametes.webp",
-      name: "Trametes",
+      src: "/wahana/saccharomyces2.webp",
+      name: "Saccharomyces",
     },
     {
       id: 3,
+      src: "/wahana/brumale3.webp",
+      name: "Brumale",
+    },
+    {
+      id: 4,
+      src: "/wahana/camemberti.webp",
+      name: "Camemberti",
+    },
+    {
+      id: 5,
       src: "/wahana/lactarius1.webp",
       name: "Lactarius",
     },
     {
-      id: 4,
-      src: "/wahana/oyster.webp",
-      name: "Oyster Coaster",
-    },
-        {
-      id: 5,
-      src: "/wahana/poria.webp",
-      name: "Poria",
+      id: 6,
+      src: "/wahana/morchella.webp",
+      name: "Morchella",
     },
   ];
 
@@ -87,8 +92,7 @@ export default function DescriptionSection() {
               Melalui peta interaktif di bawah ini, Anda dapat menjelajahi
               seluruh sudut Negeri Jamur dengan sangat mudah. Peta ini akan
               memandu Anda menemukan berbagai wahana serta fasilitas umum
-              penunjang kenyamanan di seluruh area Mikutopia, mulai dari
-              mushola, toilet, foodcourt.
+              penunjang kenyamanan di seluruh area Mikutopia.
             </p>
           </div>
         </div>
